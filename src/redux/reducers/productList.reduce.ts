@@ -36,11 +36,8 @@ const products: Product[] = JSON.parse(localStorage.getItem("products") || "null
 
 const productListReducer = (state: Product[] = products, action: typeAction) => {
     switch(action.type) {
-        case "DECREASE": {
-            return state.map(product => product.id === action.payload ? {...product, quantity: product.quantity - 1} : product)
-        }
-        default: 
-            return state
+        case "DECREASE": return state.map(product => product.id === action.payload ? {...product, quantity: product.quantity - 1} : product)
+        default: return state
     }
 }
 export default productListReducer
