@@ -46,7 +46,7 @@ export default function YourCart() {
                     </table>
                 </div>
             </div>
-            {messenge && (<div className={`w-full p-3 rounded ${messenge.includes("Add") ? 'bg-[#dff0d8] text-green-700' : 'bg-[#f2dede] text-red-700'}`}>{messenge.includes("Add") ? 'Add' : 'Delete'} to cart successfully</div>)}
+            {messenge && (<div className={`w-full p-3 rounded ${messenge.includes("Add") ? 'bg-[#dff0d8] text-green-700' : 'bg-[#f2dede] text-red-700'}`}>{messenge.includes("Add") ? 'Update' : 'Delete'} cart successfully</div>)}
         </div>
     )
 }
